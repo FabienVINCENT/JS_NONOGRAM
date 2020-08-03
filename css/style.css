@@ -1,1 +1,14 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+table, td, tr {
+  border: 1px solid black;
+}
+
+.case {
+  width: 2rem;
+  height: 2rem;
+  background-color: white;
+}
+
+.case.active {
+  background-color: black;
+}
+/*# sourceMappingURL=style.css.map */

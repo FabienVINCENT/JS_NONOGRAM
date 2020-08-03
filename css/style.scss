@@ -1,0 +1,12 @@
+table, td, tr {
+    border: 1px solid black;
+}
+
+.case {
+    width: 2rem;
+    height: 2rem;
+    background-color: white;
+    &.active {
+        background-color: black;
+    }
+}
