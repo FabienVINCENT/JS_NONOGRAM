@@ -1,14 +1,48 @@
-table, td, tr {
-  border: 1px solid black;
+table tr:first-child td {
+  background-color: #d2ddf7;
+}
+
+table tr:first-child td:first-child {
+  background-color: white;
+}
+
+table tr td:first-child {
+  background-color: #d2ddf7;
+  min-width: 5rem;
 }
 
 .case {
   width: 2rem;
   height: 2rem;
-  background-color: white;
+  background-color: transparent;
 }
 
-.case.active {
+.case div.active {
   background-color: black;
+}
+
+td:nth-child(5n+1) {
+  border-right: 2px solid black !important;
+}
+
+td:first-of-type {
+  border-left: 2px solid black !important;
+}
+
+table tr td:nth-child(2) {
+  border-left: 2px solid black !important;
+}
+
+tbody tr:first-of-type td {
+  border-bottom: 2px solid black !important;
+  border-top: 2px solid black !important;
+}
+
+tbody tr:nth-child(5n+1) td {
+  border-bottom: 2px solid black !important;
+}
+
+td {
+  border: 1px solid lightgrey;
 }
 /*# sourceMappingURL=style.css.map */
