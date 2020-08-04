@@ -1,5 +1,18 @@
+table tr:first-of-type td {
+  border-top: 2px solid #333333 !important;
+}
+
+table tr:nth-child(5n+1) td {
+  border-bottom: 2px solid #333333 !important;
+}
+
+table tr td {
+  border: 1px solid gray;
+}
+
 table tr:first-child td {
   background-color: #d2ddf7;
+  vertical-align: bottom;
 }
 
 table tr:first-child td:first-child {
@@ -8,41 +21,47 @@ table tr:first-child td:first-child {
 
 table tr td:first-child {
   background-color: #d2ddf7;
+  text-align: right;
   min-width: 5rem;
+}
+
+table tr td:nth-child(5n+1) {
+  border-right: 2px solid #333333 !important;
+}
+
+table tr td:first-of-type {
+  border-left: 2px solid #333333 !important;
 }
 
 .case {
   width: 2rem;
   height: 2rem;
-  background-color: transparent;
+  background-color: white;
+  padding: 0;
+}
+
+.case div {
+  height: 100%;
+  width: 100%;
 }
 
 .case div.active {
-  background-color: black;
+  background-color: #e76f51;
+  border: 1px solid white;
 }
 
-td:nth-child(5n+1) {
-  border-right: 2px solid black !important;
+.case div.disabled {
+  background-color: #f0f0ff;
+  border: 1px solid white;
 }
 
-td:first-of-type {
-  border-left: 2px solid black !important;
+span {
+  padding: 0.5rem 2rem;
+  margin-top: 2rem;
+  border: 1px solid #333333;
 }
 
-table tr td:nth-child(2) {
-  border-left: 2px solid black !important;
-}
-
-tbody tr:first-of-type td {
-  border-bottom: 2px solid black !important;
-  border-top: 2px solid black !important;
-}
-
-tbody tr:nth-child(5n+1) td {
-  border-bottom: 2px solid black !important;
-}
-
-td {
-  border: 1px solid lightgrey;
+span:hover {
+  background-color: #d2ddf7;
 }
 /*# sourceMappingURL=style.css.map */

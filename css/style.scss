@@ -1,52 +1,73 @@
-table,
-td,
-tr {
-    // border: 1px solid black;
-}
-
-table tr:first-child td {
-    background-color: #d2ddf7;
-    &:first-child {
-        background-color: white;
+$couleurTitre: #d2ddf7;
+$couleurFond: white;
+$couleurBordureFoncee:darken($couleurFond, 80);
+$couleurBordureClaire:darken($couleurFond, 50);
+$couleurcarre:#e76f51;
+$couleurcarreDisable:rgb(240, 240, 255);
+//FIN VARIABLES
+table tr {
+    // Premiere ligne du tableau
+    &:first-of-type td {
+        border-top: 2px solid $couleurBordureFoncee!important;
     }
-}
-
-table tr td:first-child {
-    background-color: #d2ddf7;
-    min-width: 5rem;
+    // toute les 5 decalé de 1
+    &:nth-child(5n+1) td {
+        border-bottom: 2px solid $couleurBordureFoncee!important;
+    }
+    // toute les autres td
+    td {
+        border: 1px solid $couleurBordureClaire;
+    }
+    // Fond pour les numero
+    &:first-child td {
+        background-color: $couleurTitre;
+        vertical-align: bottom;
+        //Sauf la case vide
+        &:first-child {
+            background-color: $couleurFond;
+        }
+    }
+    // Fond pour les numero
+    td:first-child {
+        background-color: $couleurTitre;
+        text-align: right;
+        min-width: 5rem;
+    }
+    // toute les 5 decalé de 1
+    td:nth-child(5n+1) {
+        border-right: 2px solid $couleurBordureFoncee!important;
+    }
+    // Bordure gauche du tableau
+    td:first-of-type {
+        border-left: 2px solid $couleurBordureFoncee!important;
+    }
 }
 
 .case {
+    // Le td du plateau de jeu (sauf les nombre (1ere ligne et 1ere colonne)
     width: 2rem;
     height: 2rem;
-    background-color: transparent;
-    & div.active {
-        background-color: black;
+    background-color: $couleurFond;
+    padding: 0;
+    div {
+        height: 100%;
+        width: 100%;
     }
-    & div.disabled {}
+    & div.active {
+        background-color: $couleurcarre;
+        border: 1px solid $couleurFond;
+    }
+    & div.disabled {
+        background-color: $couleurcarreDisable;
+        border: 1px solid $couleurFond;
+    }
 }
 
-td:nth-child(5n+1) {
-    border-right: 2px solid black!important;
-}
-
-td:first-of-type {
-    border-left: 2px solid black!important;
-}
-
-table tr td:nth-child(2) {
-    border-left: 2px solid black!important;
-}
-
-tbody tr:first-of-type td {
-    border-bottom: 2px solid black!important;
-    border-top: 2px solid black!important;
-}
-
-tbody tr:nth-child(5n+1) td {
-    border-bottom: 2px solid black!important;
-}
-
-td {
-    border: 1px solid lightgrey
+span {
+    padding: 0.5rem 2rem;
+    margin-top: 2rem;
+    border: 1px solid $couleurBordureFoncee;
+    &:hover {
+        background-color: $couleurTitre;
+    }
 }
